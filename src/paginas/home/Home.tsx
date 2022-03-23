@@ -1,7 +1,6 @@
 import React from "react";
 import { Typography, Box, Grid, Button } from "@material-ui/core";
 import './Home.css';
-import { fontWeight } from "@mui/system";
 
 function Home() {
     return (

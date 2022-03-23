@@ -1,6 +1,6 @@
 import React from 'react';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedlnIcon from '@material-ui/icons/LinkedIn';
 import { Typography, Box, Grid } from '@material-ui/core';
 
@@ -14,13 +14,13 @@ function Footer() {
                             <Typography variant="h5" align="center" gutterBottom style={{ color: "white"}}>Siga-nos nas redes sociais </Typography>
                         </Box>
                         <Box display="flex" alignItems="center" justifyContent="center">
-                            <a href="https://www.facebook.com/generationbrasil" target="_blank">
-                                <FacebookIcon style={{ fontSize: 60, color: "white"}} />
+                            <a href="https://github.com/LauraBSouza" target="_blank">
+                                <GitHubIcon style={{ fontSize: 60, color: "white"}} />
                             </a>
-                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
+                            <a href="https://www.instagram.com/laura1barros/" target="_blank">
                                 <InstagramIcon style={{ fontSize: 60, color: "white"}} />
                             </a>
-                            <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
+                            <a href="https://www.linkedin.com/in/laura-barros-souza/" target="_blank">
                                 <LinkedlnIcon style={{ fontSize: 60, color: "white"}} />
                             </a>
                         </Box>
