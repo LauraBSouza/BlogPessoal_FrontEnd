@@ -6,15 +6,15 @@ import './Login.css'
 function Login() {
     return (
         <Grid container direction="row" justifyContent="center" alignItems="center">
-            <Grid alignItems='center' xs={6}>
+            <Grid alignItems='center' xs={6} style={{ backgroundColor: '#D9D9D9', minHeight: '110vh'}}>
                 <Box padding={20}>
                     <form>
                         <Typography variant="h3" gutterBottom color="textPrimary" component='h3' align="center" style={{ fontWeight: 'bold' }}>Entrar</Typography>
-                        <TextField id="usuario" label="usuário" variant='outlined' name='usuario' margin='normal' fullWidth />
-                        <TextField id="senha" label="senha" variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+                        <TextField id="usuario" label="usuário" variant='outlined' name='usuario' margin='normal' fullWidth style={{ backgroundColor: 'white', borderColor: 'black'}}/>
+                        <TextField id="senha" label="senha" variant='outlined' name='senha' margin='normal' type='password' fullWidth style={{ backgroundColor: 'white', borderColor: 'black'}} />
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/home' className='text-decorator-none'>
-                                <Button type='submit' variant='contained' color='primary'>
+                                <Button type='submit' variant='contained' color='primary' style={{ backgroundColor: '#8b0000'}}>
                                     Logar
                                 </Button>
                             </Link>
@@ -30,8 +30,8 @@ function Login() {
 
             </Grid>
             <Grid xs={6} style={{
-                backgroundImage: `url(https://imgur.com/liqoDZh.jpg)`,
-                backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '100vh', backgroundSize: 'cover', backgroundPosition: 'center'
+                backgroundImage: `url(https://imgur.com/3EQZPjC.jpg)`,
+                backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '116vh', backgroundSize: 'cover'
             }}>
 
             </Grid>
