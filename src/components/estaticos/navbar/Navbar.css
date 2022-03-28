@@ -19,6 +19,11 @@
     margin-right: 15px;
 }
 
+.cursor{
+    cursor: pointer;
+    color: white;
+}
+
 .text-decorator-none{
     text-decoration: none !important;
 }

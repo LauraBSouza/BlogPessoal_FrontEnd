@@ -1,3 +1,26 @@
+.textos1{
+    font-weight: bold !important;
+    color: black !important;
+ }
+
+ .botao{
+    background-color: #8b0000 !important;
+ }
+
+ .form{
+    background-color: white;
+    border-color: black;
+ }
+
+.imagem{
+    background-image: url(https://imgur.com/3EQZPjC.jpg);
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 110vh;
+    background-size: cover;
+    background-position: center;
+}
+
 .text-decorator-none{
     text-decoration: none;
 }
