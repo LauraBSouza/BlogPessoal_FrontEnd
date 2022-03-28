@@ -1,3 +1,8 @@
+.background{
+    background-color: #D9D9D9;
+    min-height: 110vh;
+}
+
 .textos1{
     font-weight: bold !important;
     color: black !important;
