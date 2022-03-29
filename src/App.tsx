@@ -6,15 +6,17 @@ import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import Home from './paginas/home/Home'
 import Login from './paginas/login/Login';
 import './App.css';
+import ListaTema from './components/temas/listaTema/ListaTema';
+import ListaPostagem from './components/postagens/listaPostagem/ListaPostagem';
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Switch>
-        <div style={{minHeight: '100vh'}}>
-          
-        <Route exact path='/'>
+        <div style={{ minHeight: '100vh' }}>
+
+          <Route exact path='/'>
             <Login />
           </Route>
 
@@ -29,11 +31,17 @@ function App() {
           <Route path='/cadastrousuario'>
             <CadastroUsuario />
           </Route>
+          <Route path='/temas'>
+            <ListaTema />
+          </Route>
+          <Route path='/posts'>
+            <ListaPostagem />
+          </Route>
         </div>
       </Switch>
       <Footer />
     </Router>
-    
+
   );
 }
 
