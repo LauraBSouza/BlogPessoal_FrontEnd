@@ -67,8 +67,8 @@ function CadastroUsuario() {
         } else {
             alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
 
-            setUser({ ...user, senha: "" }) // Reinicia o campo de Senha
-            setConfirmarSenha("")           // Reinic
+            setUser({ ...user, senha: "" }) 
+            setConfirmarSenha("")           
         }
     }
 
