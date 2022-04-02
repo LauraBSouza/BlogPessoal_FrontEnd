@@ -1,13 +1,13 @@
 .background2{
-    background-color: #D9D9D9;
+    background-color: #cec091;
     min-height: 110vh;
 }
 
 .imagem2{
-    background-image: url(https://imgur.com/3EQZPjC.jpg);
+    background-image: url(https://imgur.com/aMTyrae.jpg);
     background-repeat: no-repeat;
     width: 100vh;
-    min-height: 110vh;
+    min-height: 121vh;
     background-size: cover;
     background-position: center;
 }
@@ -18,7 +18,7 @@
  }
 
  .form2{
-    background-color: white;
+    background-color: #e9e3ce;
     border-color: black;
  }
 
@@ -30,3 +30,5 @@
     margin-right: 20px !important;
     background-color: black !important;
  }
+
+ 

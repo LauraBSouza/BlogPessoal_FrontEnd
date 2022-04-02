@@ -1,6 +1,9 @@
 .titulo{
     font-weight: bold;
  }
+ .textoColor{
+    color: white !important;
+ }
 
  .appbar{
     background-color: #6f0000;

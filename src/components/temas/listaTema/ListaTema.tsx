@@ -15,7 +15,7 @@ function ListaTema() {
   useEffect(()=>{
     if(token == ''){
       alert("Você precisa estar logado")
-      history.push("/logar")
+      history.push("/login")
     }
   }, [token])
 
@@ -52,14 +52,14 @@ function ListaTema() {
 
               <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                  <Button variant="contained" className="marginLeft, button1" size='small' color="primary" >
                     atualizar
                   </Button>
                 </Box>
               </Link>
               <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" size='small' color="secondary">
+                  <Button variant="contained" size='small' color="secondary" className='button2'>
                     deletar
                   </Button>
                 </Box>

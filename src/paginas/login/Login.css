@@ -1,5 +1,5 @@
 .background{
-    background-color: #D9D9D9;
+    background-color: #b0b0b0 ;
     min-height: 110vh;
 }
 
@@ -21,7 +21,7 @@
     background-image: url(https://imgur.com/3EQZPjC.jpg);
     background-repeat: no-repeat;
     width: 100vh;
-    min-height: 110vh;
+    min-height: 116vh;
     background-size: cover;
     background-position: center;
 }
