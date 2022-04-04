@@ -47,6 +47,7 @@ function CadastroTema() {
             setTema({
                 ...tema,
                 [e.target.name]: e.target.value,
+                postagem: [{}]
             })
     
         }
