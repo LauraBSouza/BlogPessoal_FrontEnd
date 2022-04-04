@@ -15,7 +15,7 @@ function Navbar() {
   const dispatch = useDispatch()
 
   function goLogout() {
-    dispatch(addToken(''))
+    dispatch(addToken(""))
     alert("Usuário deslogado")
     history.push('/login')
   }
