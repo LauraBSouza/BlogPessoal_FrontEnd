@@ -1,6 +1,5 @@
 .background{
     background-color: #b0b0b0 ;
-    min-height: 110vh;
 }
 
 .textos1{
@@ -20,8 +19,8 @@
 .imagem{
     background-image: url(https://imgur.com/3EQZPjC.jpg);
     background-repeat: no-repeat;
-    width: 100vh;
-    min-height: 110vh;
+    width: 100vw;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
 }

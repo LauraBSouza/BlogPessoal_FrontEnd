@@ -4,12 +4,16 @@ import './Home.css';
 import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
 import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem";
 import { useHistory } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
+import { Link } from 'react-router-dom';
 
 function Home() {
 
     let history = useHistory();
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
 
     useEffect(() => {
         if (token == "") {
@@ -26,21 +30,24 @@ function Home() {
 
                 <Grid alignItems="center" item xs={6}>
                     <div className="efeito-vidro">
-                    <Box padding={20}>
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className="titulo">Seja bem vindo(a)!!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Em que você está pensando?</Typography>
-                    </Box>
-                   
-
-                    <Box display="flex" justifyContent="center">
-                        <Box marginRight={1}>
-                            <ModalPostagem />
+                        <Box padding={20}>
+                            <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className="titulo">Seja bem vindo(a)!!</Typography>
+                            <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Em que você está pensando?</Typography>
                         </Box>
-                        <Button variant="outlined" className="botao">Ver postagens</Button>
-                    </Box>
+
+
+                        <Box display="flex" justifyContent="center">
+                            <Box marginRight={1}>
+                                <ModalPostagem />
+                            </Box>
+                            <Link to="/postagens/all" className="text-decorator-none">
+                                <Button variant="outlined" className="botao">Ver postagens</Button>
+                            </Link>
+
+                        </Box>
                     </div>
 
-                   
+
                 </Grid>
 
 

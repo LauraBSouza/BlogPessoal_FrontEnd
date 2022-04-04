@@ -4,11 +4,20 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedlnIcon from '@material-ui/icons/LinkedIn';
 import { Typography, Box, Grid } from '@material-ui/core';
 import './Footer.css';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function Footer() {
-    return (
-        <>
-            <Grid container direction='row' justifyContent='center' alignItems='center' className='back1'>
+
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
+
+      var footerComponent;
+
+      if (token !== "") {
+
+          footerComponent = <Grid container direction='row' justifyContent='center' alignItems='center' className='back1'>
                 <Grid alignItems="center" item xs={12} >
                     <Box className="box1">
                         <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
@@ -38,8 +47,12 @@ function Footer() {
                     </Box>
                 </Grid>
             </Grid>
-       
-    
+
+      }
+
+    return (
+        <>
+           { footerComponent }
         </>
     );
 }
