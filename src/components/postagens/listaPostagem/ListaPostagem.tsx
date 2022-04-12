@@ -34,7 +34,7 @@ function ListaPostagem() {
 
 
   async function getPostagem(){
-    await busca("/postagens/all", setPostagens, {
+    await busca("/postagens", setPostagens, {
       headers: {
         'Authorization': token
       }

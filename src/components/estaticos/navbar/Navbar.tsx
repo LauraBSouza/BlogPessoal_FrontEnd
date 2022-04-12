@@ -51,7 +51,7 @@ function Navbar() {
             </Box>
           </Link>
 
-          <Link to="/postagens/all" className="text-decorator-none">
+          <Link to="/postagens" className="text-decorator-none">
             <Box mx={1} className='cursor' >
               <Typography variant="h6" color="inherit" className='text'>
                 postagens
@@ -59,7 +59,7 @@ function Navbar() {
             </Box>
           </Link>
 
-          <Link to="/temas/all" className="text-decorator-none">
+          <Link to="/temas" className="text-decorator-none">
             <Box mx={1} className='cursor' >
               <Typography variant="h6" color="inherit" className='text'>
                 temas
