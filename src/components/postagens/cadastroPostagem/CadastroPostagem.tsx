@@ -44,6 +44,8 @@ function CadastroPostagem() {
         id: 0,
         titulo: '',
         texto: '',
+        imagem: '',
+        anexo: '',
         data: '',
         tema: null
     })
@@ -63,7 +65,7 @@ function CadastroPostagem() {
     }, [id])
 
     async function getTemas() {
-        await busca("/temas/all", setTemas, {
+        await busca("/temas", setTemas, {
             headers: {
                 'Authorization': token
             }
@@ -171,6 +173,8 @@ function CadastroPostagem() {
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro postagem</Typography>
                 <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" placeholder="O título deve ter no mínimo 5 caracteres " fullWidth />
                 <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="texto" name="texto" variant="outlined" margin="normal" placeholder="O texto deve ter no mínimo 5 caracteres " fullWidth />
+                <TextField value={postagem.imagem} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="imagem" label="imagem" name="imagem" variant="outlined" margin="normal" fullWidth />
+                <TextField value={postagem.anexo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="anexo" label="anexo" name="anexo" variant="outlined" margin="normal" fullWidth />
 
                 <FormControl >
                     <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>

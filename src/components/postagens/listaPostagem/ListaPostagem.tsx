@@ -57,16 +57,24 @@ function ListaPostagem() {
               Postagem
             </Typography>
             <Typography variant="h5" component="h2">
+             {postagem.tema?.descricao}
+            </Typography>
+            <Typography variant="h5" component="h2">
              {postagem.titulo}
             </Typography>
             <Typography variant="h5" component="h2">
              {postagem.texto}
             </Typography>
             <Typography variant="h5" component="h2">
-             {postagem.data}
+             <img src={postagem.imagem} alt="" />
             </Typography>
+            <a target="_blank" href={postagem.anexo}>
             <Typography variant="h5" component="h2">
-             {postagem.tema?.descricao}
+             {postagem.anexo}
+            </Typography>
+            </a>
+            <Typography variant="h5" component="h2">
+             {postagem.data}
             </Typography>
           </CardContent>
           <CardActions>
