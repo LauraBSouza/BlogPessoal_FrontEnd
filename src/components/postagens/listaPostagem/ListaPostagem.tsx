@@ -5,14 +5,15 @@ import Postagem from '../../../models/Postagem';
 import './ListaPostagem.css';
 import {useHistory} from 'react-router-dom';
 import { busca } from '../../../services/Service';
-import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
+
 import { toast } from 'react-toastify';
+import { useSelector } from 'react-redux';
+import { UserState } from '../../../store/tokens/tokensReducer';
 
 function ListaPostagem() {
   const [postagens, setPostagens] = useState<Postagem[]>([])
   let history = useHistory();
-  const token = useSelector<TokenState, TokenState["tokens"]>(
+  const token = useSelector<UserState, UserState["tokens"]>(
     (state) => state.tokens
   );
 

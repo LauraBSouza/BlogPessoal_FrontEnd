@@ -7,18 +7,3 @@
     background-color: #8b0000 !important;
     color: white !important;
 }
-
-.background1{
-    background-image:
-    url("https://imgur.com/SUUoXqI.png") !important;
-    width: 100vh;
-    min-height: 100vh;
-}
-
-.efeito-vidro {
-    padding: 10px;
-    background: rgba( 255, 255, 255, 0.1 ) !important;
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ) !important;
-    backdrop-filter: blur( 10.5px ) !important;
-    -webkit-backdrop-filter: blur( 10.5px ) !important;
-  }

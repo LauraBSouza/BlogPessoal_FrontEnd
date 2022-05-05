@@ -5,7 +5,7 @@ import './CadastroTema.css';
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
+import { UserState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 
 
@@ -13,7 +13,7 @@ function CadastroTema() {
 
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+    const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     );
     const [tema, setTema] = useState<Tema>({
@@ -109,9 +109,9 @@ function CadastroTema() {
     }
 
     return (
-        <Grid container direction="row" className="background1">
+        <Grid container direction="row">
             <Container maxWidth="sm" className="topo">
-                <form onSubmit={onSubmit} className="efeito-vidro">
+                <form onSubmit={onSubmit}>
                     <Typography variant="h3" color="inherit" component="h1" align="center" >Formulário de cadastro tema</Typography>
                     <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" required fullWidth />
                     <Button type="submit" variant="contained" color="primary" className='botao'>

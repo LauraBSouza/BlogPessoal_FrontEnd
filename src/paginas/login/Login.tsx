@@ -5,7 +5,7 @@ import { login } from "../../services/Service";
 import './Login.css'
 import UserLogin from "../../models/UserLogin";
 import { useDispatch } from "react-redux";
-import { addToken } from "../../store/tokens/actions";
+import { addId, addToken } from "../../store/tokens/actions";
 import { toast } from 'react-toastify';
 
 function Login() {
@@ -17,11 +17,23 @@ function Login() {
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
+            nome: '',
             usuario: '',
             senha: '',
+            foto: '',
             token: ''
         }
     )
+
+    const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+        id: 0,
+        nome: "",
+        usuario: "",
+        senha: "",
+        foto: "",
+        token: ""
+
+    })
 
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
 
@@ -38,11 +50,20 @@ function Login() {
         }
     }, [token])
 
+    useEffect(() => {
+        if (respUserLogin.token !== "") {
+            dispatch(addToken(respUserLogin.token))
+            dispatch(addId(respUserLogin.id.toString()))
+            console.log(respUserLogin.id)
+            history.push('/home')
+        }
+    }, [respUserLogin.token])
+
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
 
         try {
-            await login(`/usuarios/logar`, userLogin, setToken)
+            await login(`/usuarios/logar`, userLogin, setRespUserLogin)
             toast.success('Usuário logado com sucesso!', {
                 position: "top-right",
                 autoClose: 2000,

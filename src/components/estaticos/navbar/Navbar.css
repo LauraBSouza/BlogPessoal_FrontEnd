@@ -1,11 +1,13 @@
 .back{
     background: linear-gradient(36deg, black 8%, #8b0000 80%)!important ;
+    box-sizing: border-box !important;
 }
 
 .bar{
     display: flex;
     justify-content: center;
 }
+
 
 .title{
     font-weight: bold !important;
@@ -27,3 +29,12 @@
 .text-decorator-none{
     text-decoration: none !important;
 }
+
+.entrar{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+}
+

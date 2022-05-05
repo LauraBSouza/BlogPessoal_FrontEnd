@@ -1,0 +1,74 @@
+.card-principal{
+    display: grid;
+    place-items: center;
+    height: 50vh!important;
+    width: 30vh;
+    padding: 100px;
+    background-color: #ffc23490;
+    justify-content: center;
+    border-radius: 30px;
+    align-items: center!important;
+}
+
+.boxuser{
+    height: 100vh!important;
+    width: 30vh!important;
+    padding-top: -40px!important;
+}
+
+.card-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 80vh;
+    border-radius: 30px;
+    background-color: #3f51b5;
+}
+
+.card-container-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-imagem{
+    max-height: 25vh!important;
+    border-radius: 32px;
+    object-fit: cover;
+}
+
+.card-container-texto{
+    max-width: 50px;
+    color: #fff;
+    text-align: justify;
+}
+
+.novotema{
+    text-decoration: none!important;
+    margin-left: 35px!important;
+}
+
+.novapostagem{
+    text-decoration: none!important;
+    padding-left: 100px;
+    margin-left: -50px!important;
+}
+
+.cadastro{
+    height: 100px;
+    width: 200px;
+    
+}
+
+.botao3{
+    background-color: #8b0000!important;
+    color: #fff!important;
+    margin-block-end: 3px !important;
+}
+
+.cadastro2{
+    display: flex;
+    
+}
+

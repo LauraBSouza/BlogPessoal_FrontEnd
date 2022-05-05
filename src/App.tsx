@@ -16,6 +16,11 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Perfil from './paginas/perfil/Perfil';
+
+
+
+
 
 
 
@@ -48,6 +53,9 @@ function App() {
             </Route>
             <Route path='/postagens'>
               <ListaPostagem />
+            </Route>
+            <Route path='/perfil'>
+              <Perfil />
             </Route>
 
             <Route exact path='/formularioPostagem'>
